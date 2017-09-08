@@ -1,0 +1,19 @@
+FROM ubuntu:devel
+
+MAINTAINER Paul Leddy pcleddy@gmail.com
+
+RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+
+RUN apt-get update
+RUN apt-get -y install wget sudo
+RUN wget -O - https://repo.saltstack.com/apt/ubuntu/16.04/amd64/latest/SALTSTACK-GPG-KEY.pub | sudo apt-key add -
+RUN echo 'deb http://repo.saltstack.com/apt/ubuntu/16.04/amd64/latest xenial main' > /etc/apt/sources.list.d/saltstack.list
+RUN echo >> /etc/apt/sources.list.d/saltstack.list
+RUN apt-get update
+RUN apt-get -y install software-properties-common salt-minion
+RUN echo >> /etc/salt/minion
+RUN echo 'file_client: local' >> /etc/salt/minion
+
+RUN apt-get -y install tree lsof
+
+CMD ["/bin/sleep", "infinity"]

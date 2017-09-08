@@ -1,0 +1,10 @@
+version: '2'
+services:
+    app:
+        build:
+            context: ./
+            dockerfile: app.docker
+        volumes:
+          - ./srv/salt:/srv/salt
+        ports:
+            - "8080:8080"
