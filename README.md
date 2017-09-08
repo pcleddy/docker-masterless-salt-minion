@@ -1,0 +1,1 @@
+# docker-masterless-salt-minion
