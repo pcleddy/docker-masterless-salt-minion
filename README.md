@@ -35,6 +35,11 @@ Or run salt apply within the container.
 
 ```
 docker exec -it dockermasterlesssaltminion_app_1 bash
+```
+
+Now, you should be logged in to the container. Make sure your command prompt looks different from your local machine, and, if so, run the following.
+
+```
 salt-call --local state.apply
 ```
 

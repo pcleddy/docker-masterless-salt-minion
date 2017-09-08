@@ -1,4 +1,3 @@
 base:
   '*':
-    - webserver
-#    - tools
+    - tools
