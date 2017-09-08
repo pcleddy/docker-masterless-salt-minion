@@ -2,7 +2,8 @@
 
 - Starts up a masterless container.
 - Mounts local directory srv/salt to container's /srv/salt. Local changes are live on the container.
-- Running salt apply locally via 'docker exec' implements changes made in local srv/salt directory.
+- Running salt apply locally via 'docker exec' -- see below -- implements changes in the container.
+- Or ssh into the container and run salt apply there.
 
 ## Clone
 
