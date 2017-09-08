@@ -1,8 +1,8 @@
 # Generic masterless docker container for SaltStack
 
-- Starts up a masterless container that listens to saltfiles in /srv/salt
-- Mount up a saltstack config volume under /srv/salt.
-
+- Starts up a masterless container.
+- Mounts local directory srv/salt to container's /srv/salt. Local changes are live on the container.
+- Running salt apply locally via 'docker exec' implements changes made in local srv/salt directory.
 
 ## Clone
 
