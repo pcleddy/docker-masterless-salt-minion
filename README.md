@@ -18,11 +18,13 @@ docker-compose up --build -d
 
 ## Salt first run
 
-Run salt apply from your local machine
+Run salt apply from your local machine.
 
 ```
 docker exec -it masterless001_app_1 salt-call --local state.apply
 ```
+
+This typically takes a while.
 
 
 ## Alter/create salt test code, re-apply changes
