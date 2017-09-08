@@ -14,6 +14,6 @@ RUN apt-get -y install software-properties-common salt-minion
 RUN echo >> /etc/salt/minion
 RUN echo 'file_client: local' >> /etc/salt/minion
 
-RUN apt-get -y install tree lsof
+RUN apt-get -y install tree lsof dstat htop
 
 CMD ["/bin/sleep", "infinity"]

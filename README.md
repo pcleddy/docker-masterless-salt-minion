@@ -24,7 +24,7 @@ docker-compose up --build -d
 Run salt apply from your local machine.
 
 ```
-docker exec -it dockermasterlesssaltminion_salt001_1 salt-call --local state.apply
+docker exec -it dockermasterlesssaltminion_app_1 salt-call --local state.apply
 ```
 
 This typically takes a while.
@@ -34,7 +34,7 @@ This typically takes a while.
 Or run salt apply within the container.
 
 ```
-docker exec -it dockermasterlesssaltminion_salt001_1 bash
+docker exec -it dockermasterlesssaltminion_app_1 bash
 salt-call --local state.apply
 ```
 
@@ -44,5 +44,5 @@ salt-call --local state.apply
 After making changes or additions, just repeat the same command to have salt apply them to your container.
 
 ```
-docker exec -it dockermasterlesssaltminion_salt001_1 salt-call --local state.apply
+docker exec -it dockermasterlesssaltminion_app_1 salt-call --local state.apply
 ```
